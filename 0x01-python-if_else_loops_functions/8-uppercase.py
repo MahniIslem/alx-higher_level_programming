@@ -1,16 +1,7 @@
 #!/usr/bin/python3
-
-def uppercase(s):
-    for char in s:
-        # Check if the character is a lowercase letter
-        if 'a' <= char <= 'z':
-            # Convert the lowercase letter to uppercase using ASCII manipulation
-            print("{}".format(chr(ord(char) - ord('a') + ord('A'))), end="")
-        else:
-            print("{}".format(char), end="")
-    
-    print()  # Print a new line after processing the entire string
-
-# Test the function with the provided main code
-uppercase("best")
-uppercase("Best School 98 Battery street")
+def uppercase(str):
+    for i in str:
+        if ord("a") <= ord(i) <= ord("z"):
+            i = chr(ord(i) - 32)
+        print("{:s}".format(i), end="")
+    print()
